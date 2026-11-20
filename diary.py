@@ -16,7 +16,7 @@ def define_negativity(text):
 
 sentiment = SentimentIntensityAnalyzer()
 
-filenames = [p.name for p in Path("files").iterdir() if p.is_file()]
+filenames = sorted([p.name for p in Path("files").iterdir() if p.is_file()])
 
 dates = [f.strip(".txt") for f in filenames]
 positives = []
